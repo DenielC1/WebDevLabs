@@ -53,6 +53,6 @@ function greetingFunc(){
     
 }
 
-if (window.location.pathname == "/index.html" || window.location.pathname == "/WebDevLabs/index.html"){
+if (window.location.pathname.includes("/index.html") || window.location.pathname == "/WebDevLabs/"){
     greetingFunc();
 }

@@ -53,7 +53,6 @@ function greetingFunc(){
     
 }
 
-href="./index.html"
-if (window.location.pathname == "/index.html"){
+if (window.location.pathname == "/index.html" || window.location.pathname == "/WebDevLabs/index.html"){
     greetingFunc();
 }

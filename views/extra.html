@@ -1,37 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="author" content="Deniel Chen">
-    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
-    <meta name="description" content="Deniel's professional website">
-    <title> Extra </title>
-    <link rel="stylesheet" href="../static/style.css">
-    <script src="../static/script.js" defer></script>
-</head>
-<body>
-    <header> 
-        <h1 id="webname"> Deniel Chen </h1>
-        <nav>
-            <a href="../index.html">about</a> |
-            <a href="resume.html">resume</a> |
-            <a href="contact.html">contact</a> |
-            <a href="extra.html">extra</a>
-        </nav>
-    </header>
-    
-    <div class="main">
-        <h2> Things I love to do for fun. </h2> 
-        <ul>
-            <li> Traveling </li>
-            <li> Gaming </li>
-            <li> Watching movies/shows </li>
-        </ul>
-    </div>
-    
-    <br>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta name="author" content="Deniel Chen">
+        <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+        <meta name="description" content="Deniel's professional website">
+        <title> Extra </title>
+        <link rel="stylesheet" href="../static/style.css">
+        <script src="../static/script.js" defer></script>
+    </head>
+    <body onload="addYear()">
+        <header> 
+            <h1 id="webname"> Deniel Chen </h1>
+            <nav>
+                <a href="../index.html">about</a> |
+                <a href="resume.html">resume</a> |
+                <a href="contact.html">contact</a> |
+                <a href="extra.html">extra</a>
+            </nav>
+        </header>
+        
+        <div class="main">
+            <h2> Things I love to do for fun. </h2> 
+            <button onclick="showList(this)">Click to see...</button>
+            <ul id="fun_list">
+                <li> Traveling </li>
+                <li> Gaming </li>
+                <li> Watching movies/shows </li>
+            </ul>
+        </div>
+        
+        <br>
 
-    <footer>
-        © 2025 Designed and coded by Deniel Chen
-    </footer>
-</body>
-</html>
+        <footer id="copyyear" >
+            Designed and coded by Deniel Chen ©  
+        </footer>
+    </body>
+    </html>

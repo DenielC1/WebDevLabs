@@ -7,8 +7,9 @@
     <title> Home </title>
     <link rel="stylesheet" href="./static/style.css">
     <script src="./static/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body>
+<body onload="addYear()">
     <header> 
         <h1 id="webname"> Deniel Chen </h1>
         <nav>
@@ -21,14 +22,17 @@
     
     <div class="main">
         <h2 id="greeting"> My name is Deniel Chen. </h2> 
-        <p id="intro"> I am a first year Information Systems student taking 67-250 in Fall 2025 at CMU!</p> 
         <img src="static/me.png" alt="Me" width="250" height="250">
+        <p id="intro"> I am a first year Information Systems student taking 67-250 in Fall 2025 at CMU!</p> 
+        <p id="intro_more"> I'm taking 21-127 and 15-122 this semester!</p> 
+        <button id= "intro_more_button" onclick="showMore(this)"> Read more...</button>
+        <button id="intro_less_button" onclick="showLess(this)"> Read less...</button>
     </div>
 
     <br>
     
-    <footer>
-        © 2025 Designed and coded by Deniel Chen
+    <footer id="copyyear" >
+        Designed and coded by Deniel Chen ©  
     </footer>
 </body>
 </html>

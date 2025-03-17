@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../static/style.css">
     <script src="../static/script.js" defer></script>
 </head>
-<body>
+<body onload="addYear()">
     <header> 
         <h1 id="webname"> Deniel Chen </h1>
         <nav>
@@ -22,18 +22,19 @@
 
         <h2> Contact Me</h2>
         <form action="/action_page.php" method="get">
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name" value=""><br>
-
-          <label for="email">Email:</label><br>
-          <input type="text" id="email" name="email" value=""><br>
-
-          <label for="comment">Comments:</label><br>
-          <input type="text" id="comment" name="comment" value=""><br><br>
-
-          <input type="submit" value="Submit">
-
+            <label for="name">Name*</label><br>
+            <input type="text" id="name" name="name" value="" required ><br>
+    
+            <label for="email">Email*</label><br>
+            <input type="text" id="email" name="email" value="" required ><br>
+    
+            <label for="comment">Comments*</label><br>
+            <input type="text" id="comment" name="comment" value="" required ><br>
+    
+            <input type="submit" value="Submit" onclick="submitForm()">
         </form> 
+
+        <p id="form_error">Please fill out the form.</p>
         
         <h2> Contact Information</h2>
         <table>
@@ -57,8 +58,9 @@
         
         <br>
         
-        <footer>
-            © 2025 Designed and coded by Deniel Chen
+        <footer id="copyyear" >
+            Designed and coded by Deniel Chen ©  
         </footer>
 </body>
 </html>
+

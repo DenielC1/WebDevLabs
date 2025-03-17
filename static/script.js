@@ -56,3 +56,40 @@ function greetingFunc(){
 if (window.location.pathname.includes("/index.html") || window.location.pathname == "/WebDevLabs/"){
     greetingFunc();
 }
+
+function addYear(){
+    let d = new Date();
+    let y = d.getFullYear();
+    
+    const e = document.getElementById("copyyear");
+
+    e.innerHTML += y;
+}
+
+function showList(element){
+    const ui_element = document.getElementById("fun_list");
+
+    ui_element.style.display = "block";
+    element.style.display = "none";
+}
+
+function showMore(element){
+    $(element).hide();
+    $("#intro_more").show();
+    $("#intro_less_button").show();
+}
+
+function showLess(element){
+    $(element).hide();
+    $("#intro_more").hide();
+    $("#intro_more_button").show();
+}
+
+function submitForm(){
+    const input1 = document.getElementById("name");
+    const input2 = document.getElementById("email");
+    const input3 = document.getElementById("comment");
+    if (!input1.checkValidity() || !input2.checkValidity() || !input3.checkValidity()){
+        document.getElementById("form_error").style.display = "block";
+    }
+}

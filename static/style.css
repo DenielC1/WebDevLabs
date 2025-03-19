@@ -24,7 +24,7 @@ padding-bottom: 12px;
 background-color:#475fa5;
 color:dodgerblue;
 width: fit-content;
-  }
+}
 
 table tr:nth-child(even){
     background-color:darkgray;
@@ -33,15 +33,43 @@ table tr:nth-child(even){
 form{
     display: block;
     margin: auto;
-    text-align: center;
 }
 
 #form_error {
     display: none;
     margin: auto;
-    text-align: center;
 }
 
-#fun_list, #intro_more, #intro_less_button {
+#intro_more, #intro_less_button {
     display: none; 
+}
+
+.fun_image {
+    border-radius: 25%;
+    width: 500px;
+    height: 500px;
+}
+
+.mainLayout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container {
+    border-style: solid;
+    border-radius: 10px;
+    display: inline-block;
+    
+}
+
+#adviceButton {
+    background-color: #6b85d4;
+    border-radius: 10px;
+    width: 500px;
+}   
+
+#cmu_map {
+    width: 500px;
+    height: 500px;
 }

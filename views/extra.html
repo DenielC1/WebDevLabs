@@ -19,14 +19,31 @@
             </nav>
         </header>
         
-        <div class="main">
-            <h2> Things I love to do for fun. </h2> 
-            <button onclick="showList(this)">Click to see...</button>
-            <ul id="fun_list">
-                <li> Traveling </li>
-                <li> Gaming </li>
-                <li> Watching movies/shows </li>
-            </ul>
+        <div class="mainLayout">
+            <!-- <button onclick="showList(this)">Click to see...</button> -->
+            <item1>
+                <h2> Things I love to do for fun. </h2> 
+                <ul id="fun_list">
+                    <li> Traveling </li>
+                    <li> Gaming </li>
+                    <li> Watching movies/shows </li>
+                </ul>
+            </item1>
+            <item2>
+                <img class="fun_image" src="../static/main_bg.jpg" alt="cityscape">
+            </item2>
+            <item3>
+                <iframe width="600" height="480" src="https://www.youtube.com/embed/bSLvrz5GraI" title="Only in Pittsburgh: Duquesne Incline"></iframe>
+            </item3>
+            <item4>
+                <div class="container">
+                    <h2>Need Some Advice?</h2>
+                    <p id="adviceText">
+                        Click the button to get a random piece of advice!
+                    </p>
+                    <button id="adviceButton" onclick="getAdvice()"> Get Advice! </button>
+                </div>
+            </item4>
         </div>
         
         <br>

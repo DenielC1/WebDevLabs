@@ -35,27 +35,27 @@ function findTheBanana(fruit, index, array){
 // L1.forEach(findTheBanana);
 // L2.forEach(findTheBanana);
 
-function greetingFunc(){
-    let d = new Date();
-    let h = d.getHours();
+// function greetingFunc(){
+//     let d = new Date();
+//     let h = d.getHours();
 
-    const e = document.getElementById("greeting");
+//     const e = document.getElementById("greeting");
 
-    if (h < 12){
-        e.innerHTML = "Good morning!" + e.innerHTML; 
-    } else if (12 < h < 18){
-        e.innerHTML = "Good afternoon!" + e.innerHTML;
-    } else if (18 < h < 20){
-        e.innerHTML = "Good evening!" + e.innerHTML;
-    } else if (20 < h < 24 || 0 < h < 5){
-        e.innerHTML = "Good night!" + e.innerHTML;
-    }
+//     if (h < 12){
+//         e.innerHTML = "Good morning!" + e.innerHTML; 
+//     } else if (12 < h < 18){
+//         e.innerHTML = "Good afternoon!" + e.innerHTML;
+//     } else if (18 < h < 20){
+//         e.innerHTML = "Good evening!" + e.innerHTML;
+//     } else if (20 < h < 24 || 0 < h < 5){
+//         e.innerHTML = "Good night!" + e.innerHTML;
+//     }
     
-}
+// }
 
-if (window.location.pathname.includes("/index.html") || window.location.pathname == "/WebDevLabs/"){
-    greetingFunc();
-}
+// if (window.location.pathname.includes("/index.html") || window.location.pathname == "/WebDevLabs/"){
+//     greetingFunc();
+// }
 
 function addYear(){
     let d = new Date();
@@ -66,12 +66,12 @@ function addYear(){
     e.innerHTML += y;
 }
 
-// function showList(element){
-//     const ui_element = document.getElementById("fun_list");
+function showList(element){
+    const ui_element = document.getElementById("fun_list");
 
-//     ui_element.style.display = "block";
-//     element.style.display = "none";
-// }
+    ui_element.style.display = "block";
+    element.style.display = "none";
+}
 
 function showMore(element){
     $(element).hide();
@@ -94,14 +94,19 @@ function submitForm(){
     }
 }
 
-function getAdvice() {
-    fetch("https://api.adviceslip.com/advice")
-        .then(response => response.json())
-        .then(data => {
-            const adviceText = document.getElementById("adviceText");
-            adviceText.innerText = data.slip.advice;
-        })
-        .catch(error => {
-            console.error("Error fetching advice:", error);
-        });
+function expandMenu(){
+    $("nav a").toggle();
 }
+
+function setActive(){
+    const currentPath = window.location.pathname.split("/").pop(); // get current page file name
+    const navLinks = document.getElementsByTagName("a");
+  
+    for (let i = 0; i < navLinks.length; i++){
+        const linkPath = navLinks[i].href.split("/").pop()
+        if (linkPath === currentPath || (linkPath === "index.html" && currentPath === "")) {
+            navLinks[i].classList.add("active");
+        }
+    }
+}
+  

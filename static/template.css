@@ -1,0 +1,121 @@
+.containers {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "mainimg maincontent maincontent"
+    "bottomcontent bottomcontent bottomcontent"
+    "footer footer footer";
+    gap: 10px;
+}
+
+header {
+    grid-area: header;
+    background-color: aquamarine;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    grid-area: nav;
+    background-color: palegreen;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 25px;
+}
+
+#menubar {
+    display: none;
+}
+
+.mainimg {
+    grid-area: mainimg;
+    background-color: rosybrown;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maincontent {
+    grid-area: maincontent;
+    background-color: mediumorchid;
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.bottomcontent { 
+    grid-area: bottomcontent;
+    background-color: blueviolet;
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+footer {
+    grid-area: footer;
+    background-color: firebrick;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .containers {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "mainimg"
+        "maincontent"
+        "bottomcontent"
+        "footer";
+        gap: 10px;
+    }
+    
+    nav {
+        height: auto;
+        min-height: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    #menubar {
+        margin: 25px;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    nav a {
+        display: block !important;
+    }
+
+    #menubar {
+        display: none;
+    }
+}
+
+.active {
+    color: blueviolet;
+}

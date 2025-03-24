@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="author" content="Deniel Chen">
-    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
-    <meta name="description" content="Deniel's professional website">
-    <title> Home </title>
-    <link rel="stylesheet" href="./static/style.css">
-    <script src="./static/script.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../static/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
 </head>
-<body onload="addYear()">
-    <header> 
-        <h1 id="webname"> Deniel Chen </h1>
+<body onload="setActive()">
+    <div class="containers">
+        <header id="webname">Deniel Chen</header>
         <nav>
-            <a href="./index.html">about</a> |
-            <a href="./views/resume.html">resume</a> |
-            <a href="./views/contact.html">contact</a> |
+            <i class="fa fa-bars" onclick="expandMenu()" id="menubar"></i>
+            <a href="./index.html">about</a>
+            <a href="./views/resume.html">resume</a>
+            <a href="./views/contact.html">contact</a>
             <a href="./views/extra.html">extra</a>
         </nav>
-    </header>
-    
-    <div class="main">
-        <h2 id="greeting"> My name is Deniel Chen. </h2> 
-        <img src="static/me.png" alt="Me" width="250" height="250">
-        <p id="intro"> I am a first year Information Systems student taking 67-250 in Fall 2025 at CMU!</p> 
-        <p id="intro_more"> I'm taking 21-127 and 15-122 this semester!</p> 
-        <button id= "intro_more_button" onclick="showMore(this)"> Read more...</button>
-        <button id="intro_less_button" onclick="showLess(this)"> Read less...</button>
+        <div class="mainimg">
+            <img src="../static/me.png" alt="Me">
+        </div>
+        <div class="maincontent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, officiis rerum enim pariatur quos voluptate. Ut dolorem, iusto amet, velit dolore totam corrupti facere voluptas, molestiae quaerat consectetur similique possimus.
+        </div>
+        <div class="bottomcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis commodi consectetur unde ullam nam sed numquam nostrum harum, doloremque repudiandae perferendis provident excepturi delectus nihil omnis minus quo a perspiciatis!
+        </div>
+        <footer>
+            Designed and coded by Deniel Chen ©  
+        </footer>
     </div>
-
-    <br>
-    
-    <footer id="copyyear" >
-        Designed and coded by Deniel Chen ©  
-    </footer>
 </body>
 </html>
